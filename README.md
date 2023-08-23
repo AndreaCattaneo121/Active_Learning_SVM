@@ -5,6 +5,7 @@ In this case the active learning procedure was carried out as follows:
 Step 1: Extract a random subset from the original data set and train a model on this subset.  
 Step 2: Create a new subset consisting of the support vectors of the previous model and a maximum of 4 points from the entire training set. The 4 points were selected according to the following criteria:  
    - one point for each class corresponding to the closest point to the hyperplane, chosen between the correctly classified points that are inside the margin  
-   - one point for each class corresponding to the point furthest from the hyperplane and selected between the misclassified points.  
+   - one point for each class corresponding to the point furthest from the hyperplane and selected between the misclassified points.
+
 Step 3: Train a new model with this new subset and check if there are any points inside the margin or misclassified.  
 The procedure is iterative and stops when there are no points inside the margin or misclassified, or when the selected points are already in the training set.
